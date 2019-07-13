@@ -1,0 +1,18 @@
+import wollok.game.*
+import rompecabezas.*
+
+program puzzle {
+	var p = new Puzzle(1)
+
+	p.mezclar()
+	p.mezclar()
+	p.piezas().forEach({ pieza => 
+		game.addVisual(pieza)
+		game.hideAttributes(pieza)
+	})
+	
+	game.width(4)
+	game.height(4)
+	game.title("Rompecabezas")
+	game.start()
+}
